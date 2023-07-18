@@ -57,6 +57,13 @@ public class XoTest {
         String[][] board = {{"X", "-", "-"}, {"X", "-", "-"}, {"X", "-", "-"}};
         assertEquals(true, Lab3.checkWinner(board, 1, 1, trun));
     }
-    
+
+    @Test
+    public void test_X_Win_Row() {
+        String trun = "X";
+        String[][] board = {{"X", "X", "X"}, {"-", "-", "-"}, {"-", "-", "-"}};
+
+        assertEquals(true, Lab3.checkWinner(board, 1, 1, trun));
+    }
 
 }
