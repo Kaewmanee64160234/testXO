@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/UnitTests/JUnit5TestClass.java to edit this template
  */
 
+import com.mycompany.lab3.Lab3;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -15,23 +16,22 @@ import static org.junit.jupiter.api.Assertions.*;
  * @author USER
  */
 public class XoTest {
-    
+
     public XoTest() {
     }
 
-  
     @BeforeAll
     public static void setUpClass() {
     }
-    
+
     @AfterAll
     public static void tearDownClass() {
     }
-    
+
     @BeforeEach
     public void setUp() {
     }
-    
+
     @AfterEach
     public void tearDown() {
     }
@@ -41,4 +41,13 @@ public class XoTest {
     //
     // @Test
     // public void hello() {}
+    @Test
+    public void test_Not_Play() {
+        String trun = "X";
+        String[][] board = {{"-", "-", "-"}, {"-", "-", "-"}, {"-", "-", "-"}};
+
+        assertEquals(false, Lab3.checkWinner(board, 1, 1, trun));
+
+    }
+    
 }
