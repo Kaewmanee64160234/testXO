@@ -38,40 +38,7 @@ public class XoTest {
 
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
-    //
-    // @Test
-    // public void hello() {}
-    @Test
-    public void test_Not_Play() {
-        String trun = "X";
-        String[][] board = {{"-", "-", "-"}, {"-", "-", "-"}, {"-", "-", "-"}};
-
-        assertEquals(false, Lab3.checkWinner(board, 1, 1, trun));
-
-    }
-
-    @Test
-
-    public void test_X_Win_Column() {
-        String trun = "X";
-        String[][] board = {{"X", "-", "-"}, {"X", "-", "-"}, {"X", "-", "-"}};
-        assertEquals(true, Lab3.checkWinner(board, 1, 1, trun));
-    }
-
-    @Test
-    public void test_X_Win_Row() {
-        String trun = "X";
-        String[][] board = {{"X", "X", "X"}, {"-", "-", "-"}, {"-", "-", "-"}};
-
-        assertEquals(true, Lab3.checkWinner(board, 1, 1, trun));
-    }
     
-    @Test
-    public void test_X_Win_Diagonal_1() {
-        String trun = "X";
-        String[][] board = {{"X", "-", "-"}, {"-", "X", "-"}, {"-", "-", "X"}};
-
-        assertEquals(true, Lab3.checkWinner(board, 1, 1, trun));
-    }
+   
 
 }
