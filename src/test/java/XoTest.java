@@ -109,6 +109,15 @@ public class XoTest {
     }
 
     @Test
+    public void Check_Win_When_O_Win_At_Row3() {
+        String[][] board = {{"-", "-", "-"}, {"-", "-", "-"}, {"O", "O", "O"}};
+        String turn = "O";
+        int row = 3;
+        int column = 2;
+        assertEquals(true, Lab3.checkWinner(board, row, column, turn));
+    }
+
+    @Test
     public void Check_Win_When_O_Win_At_Column() {
         String[][] board = {{"O", "-", "-"}, {"O", "-", "-"}, {"O", "-", "-"}};
         String turn = "O";
@@ -117,19 +126,21 @@ public class XoTest {
         assertEquals(true, Lab3.checkWinner(board, row, column, turn));
     }
 
+    @Test
     public void Check_Win_When_O_Win_At_Column2() {
         String[][] board = {{"-", "O", "-"}, {"-", "O", "-"}, {"-", "O", "-"}};
         String turn = "O";
-        int row = 1;
-        int column = 1;
+        int row = 2;
+        int column = 2;
         assertEquals(true, Lab3.checkWinner(board, row, column, turn));
     }
 
+    @Test
     public void Check_Win_When_O_Win_At_Column3() {
         String[][] board = {{"-", "-", "O"}, {"-", "-", "O"}, {"-", "-", "O"}};
         String turn = "O";
-        int row = 1;
-        int column = 1;
+        int row = 3;
+        int column = 3;
         assertEquals(true, Lab3.checkWinner(board, row, column, turn));
     }
 
