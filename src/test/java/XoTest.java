@@ -62,6 +62,14 @@ public class XoTest {
         int column = 1;
         assertEquals(true, Lab3.checkWinner(board, row, column, turn));
     }
+      @Test
+    public void Check_Win_When_X_Win_At_Row2() {
+        String[][] board = {{"-", "-", "-"}, {"X", "X", "X"}, {"-", "-", "-"}};
+        String turn = "X";
+        int row = 2;
+        int column = 2;
+        assertEquals(true, Lab3.checkWinner(board, row, column, turn));
+    }
 
     @Test
     public void Check_Win_When_X_Win_At_Column() {
