@@ -63,13 +63,13 @@ public class XoTest {
         assertEquals(true, Lab3.checkWinner(board, row, column, turn));
     }
     
-//    @Test
-//    public void Check_Win_When_X_Win_At_Column(){
-//     String[][] board = {{"X","-","-"},{"X","-","-"},{"X","-","-"}};
-//        String turn = "X";
-//        int row = 1;
-//        int column = 1;
-//        assertEquals(true, Lab3.checkWinner(board, row, column, turn));
-//    }
+    @Test
+    public void Check_Win_When_X_Win_At_Column(){
+     String[][] board = {{"X","-","-"},{"X","-","-"},{"X","-","-"}};
+        String turn = "X";
+        int row = 1;
+        int column = 1;
+        assertEquals(true, Lab3.checkWinner(board, row, column, turn));
+    }
 
 }
