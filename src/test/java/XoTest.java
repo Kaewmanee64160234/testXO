@@ -115,4 +115,12 @@ public class XoTest {
         int column = 1;
         assertEquals(true, Lab3.checkWinner(board, row, column, turn));
     }
+    @Test 
+    public void Check_Win_When_O_Win_Diagonal_2(){
+    String[][] board = {{"-", "-", "O"}, {"-", "O", "-"}, {"O", "-", "-"}};
+        String turn = "O";
+        int row = 3;
+        int column = 1;
+        assertEquals(true, Lab3.checkWinner(board, row, column, turn));
+    }
 }
