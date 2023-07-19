@@ -42,18 +42,18 @@ public class XoTest {
     // @Test
     // public void hello() {}
 //    @Test
-
     /**
      *
      */
     @Test
-    public void Check_Not_Play(){
-       String[][] board = { {"-", "-", "-"}, {"-", "-", "-"}, {"-", "-", "-"}};
+    public void Check_Not_Play() {
+        String[][] board = {{"-", "-", "-"}, {"-", "-", "-"}, {"-", "-", "-"}};
         String turn = "X";
         int row = 1;
         int column = 1;
         assertEquals(false, Lab3.checkWinner(board, row, column, turn));
     }
+
     @Test
     public void Check_Win_When_X_Win_At_Row() {
         String[][] board = {{"X", "X", "X"}, {"-", "-", "-"}, {"-", "-", "-"}};
@@ -62,10 +62,19 @@ public class XoTest {
         int column = 1;
         assertEquals(true, Lab3.checkWinner(board, row, column, turn));
     }
-    
+
     @Test
-    public void Check_Win_When_X_Win_At_Column(){
-     String[][] board = {{"X","-","-"},{"X","-","-"},{"X","-","-"}};
+    public void Check_Win_When_X_Win_At_Column() {
+        String[][] board = {{"X", "-", "-"}, {"X", "-", "-"}, {"X", "-", "-"}};
+        String turn = "X";
+        int row = 1;
+        int column = 1;
+        assertEquals(true, Lab3.checkWinner(board, row, column, turn));
+    }
+
+    @Test
+    public void Check_Win_When_X_Win_Diagonal_1() {
+        String[][] board = {{"X", "-", "-"}, {"-", "X", "-"}, {"-", "-", "X"}};
         String turn = "X";
         int row = 1;
         int column = 1;
