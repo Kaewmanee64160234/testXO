@@ -123,4 +123,11 @@ public class XoTest {
         int column = 1;
         assertEquals(true, Lab3.checkWinner(board, row, column, turn));
     }
+    
+    @Test
+    public void check_Draw(){
+    String[][] board = {{"X","O"," X"},{"X"," O ","X"},{" O ","X","O"}};
+ 
+        assertEquals(true, Lab3.checkDraw(board));
+    }
 }
